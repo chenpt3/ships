@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm run check && next dev",
+    "build": "npm run check && next build",
+    "start": "npm run check && next start",
     "lint": "next lint",
-    "test": "jest",
+    "test": "npm run check && jest",
     "watch": "jest --watch",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "npm run check && husky install",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run format && npm run lint && npm run typecheck"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^8.2.0",
