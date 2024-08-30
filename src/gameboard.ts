@@ -1,32 +1,25 @@
 import Ship from '@/ship';
-
-class Cell {
-  state: 'water' | 'ship' | 'wreckage' | 'missed';
-  ship: null | Ship;
-  row: number;
-  col: number;
-
-  constructor(row: number, col: number) {
-    this.row = row;
-    this.col = col;
-    this.state = 'water';
-    this.ship = null;
-  }
-}
+import Cell from '@/cell';
 
 class Gameboard {
   attacks: number;
   missed: string[];
   cells: Cell[][];
   BOARD_SIZE: number;
+  sunken: number;
+  SHIPS_AMOUNT: number;
   validRows: string[];
+  alive: boolean;
 
-  constructor() {
-    this.BOARD_SIZE = 10;
+  constructor(size = 10, shipAmount = 5) {
+    this.BOARD_SIZE = size;
+    this.SHIPS_AMOUNT = shipAmount;
+    this.sunken = 0;
     this.attacks = 0;
     this.missed = [];
     this.cells = this.initBoard(this.BOARD_SIZE);
     this.validRows = [...'abcdefghij'];
+    this.alive = true;
   }
 
   initBoard(size: number): Cell[][] {
@@ -83,6 +76,8 @@ class Gameboard {
       cell.ship.hit();
       cell.state = 'wreckage';
       this.attacks++;
+      if (cell.ship.sunk) this.sunken++;
+      if (this.sunken >= this.SHIPS_AMOUNT) this.alive = false;
       return true;
     }
     if (cell.state === 'water') {
