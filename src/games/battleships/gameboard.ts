@@ -1,5 +1,5 @@
-import Ship from '@/ship';
-import Cell from '@/cell';
+import Ship from '@/games/battleships/ship';
+import Cell from '@/games/battleships/cell';
 
 class Gameboard {
   attacks: number;

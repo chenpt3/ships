@@ -1,4 +1,4 @@
-import Gameboard from '@/gameboard';
+import Gameboard from '@/games/battleships/gameboard';
 
 describe('Board tests', () => {
   let board: Gameboard;

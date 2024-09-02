@@ -1,4 +1,4 @@
-import Ship from '@/ship';
+import Ship from '@/games/battleships/ship';
 
 let ship: Ship;
 

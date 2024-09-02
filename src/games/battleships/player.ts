@@ -1,4 +1,4 @@
-import board from '@/gameboard';
+import board from '@/games/battleships/gameboard';
 
 class Player {
   board: board;

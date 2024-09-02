@@ -1,4 +1,4 @@
-import Ship from '@/ship';
+import Ship from '@/games/battleships/ship';
 
 class Cell {
   state: 'water' | 'ship' | 'wreckage' | 'missed';
