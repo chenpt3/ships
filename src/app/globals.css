@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global text styles */
+body {
+  @apply text-primaryText-light dark:text-primaryText-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-primaryText-light dark:text-primaryText-dark;
+}
+
+p {
+  @apply text-secondaryText-light dark:text-secondaryText-dark;
+}
+
+/* Global icon styles */
+.icon-primary {
+  @apply text-primaryIcon-light dark:text-primaryIcon-dark;
+}
+
+.icon-secondary {
+  @apply text-secondaryIcon-light dark:text-secondaryIcon-dark;
+}
+
+.icon-muted {
+  @apply text-mutedIcon-light dark:text-mutedIcon-dark;
+}

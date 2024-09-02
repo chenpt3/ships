@@ -8,13 +8,36 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primaryText: {
+          light: '#1a1a1a', // Near-Black for Light Mode
+          dark: '#f5f5f5', // Near-White for Dark Mode
+        },
+        secondaryText: {
+          light: '#4a4a4a', // Dark Gray for Light Mode
+          dark: '#d1d1d1', // Light Gray for Dark Mode
+        },
+        mutedText: {
+          light: '#737373', // Medium Gray for Light Mode
+          dark: '#737373', // Medium Gray for Dark Mode
+        },
+        primaryIcon: {
+          light: '#1a1a1a', // Near-Black for Light Mode
+          dark: '#f5f5f5', // Near-White for Dark Mode
+        },
+        secondaryIcon: {
+          light: '#4a4a4a', // Dark Gray for Light Mode
+          dark: '#d1d1d1', // Light Gray for Dark Mode
+        },
+        mutedIcon: {
+          light: '#737373', // Medium Gray for Light Mode
+          dark: '#737373', // Medium Gray for Dark Mode
+        },
       },
     },
   },
+  darkMode: 'class', // Enable dark mode support
   plugins: [],
 };
+
 export default config;
