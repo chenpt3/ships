@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,7 @@
 /* Global text styles */
 body {
   @apply text-primaryText-light dark:text-primaryText-dark;
+  @apply bg-headerFooterBg-light dark:bg-headerFooterBg-dark;
 }
 
 h1,
@@ -31,4 +33,17 @@ p {
 
 .icon-muted {
   @apply text-mutedIcon-light dark:text-mutedIcon-dark;
+}
+
+/* Global background styles */
+.header-footer {
+  @apply bg-headerFooterBg-light dark:bg-headerFooterBg-dark;
+}
+
+.main {
+  @apply bg-mainBg-light dark:bg-mainBg-dark;
+}
+
+.aside {
+  @apply bg-asideBg-light dark:bg-asideBg-dark;
 }

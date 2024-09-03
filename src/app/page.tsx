@@ -1,3 +1,9 @@
+import StartScreen from '@/components/game_screens/start';
+
 export default function Home() {
-  return <div>main</div>;
+  return (
+    <div>
+      <StartScreen />
+    </div>
+  );
 }

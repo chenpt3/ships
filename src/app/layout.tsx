@@ -15,15 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head />
-      <body
-        className={`${inter.className} bg-gray-800 dark:bg-gray-900 min-h-screen flex flex-col`}
-      >
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Header />
         <div className="flex flex-1">
           <SideMenu />
-          <main className="bg-white dark:bg-gray-800 flex flex-1">
-            {children}
-          </main>
+          <main className="flex flex-1 main">{children}</main>
         </div>
         <Footer />
       </body>
