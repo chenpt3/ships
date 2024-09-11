@@ -1,9 +1,5 @@
-import StartScreen from '@/components/game_screens/start';
-
+import ScreenManager from '@/components/game_screens/screenManager';
 export default function Home() {
-  return (
-    <div>
-      <StartScreen />
-    </div>
-  );
+  const mgr = new ScreenManager('start');
+  return <>{mgr.returnCurrentScreen}</>;
 }
